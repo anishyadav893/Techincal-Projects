@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Hello, {{ user.username}}. How are you?</h1>
+	{% for comment in posts %}
+	<div>
+		<p>{{ comment.author.username }} has commented that <strong>{{ comment.post }}</strong></p>
+	</div>
+	{% endfor %}
+{% endblock %}
